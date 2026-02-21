@@ -1,0 +1,15 @@
+<h2>User Detail</h2>
+
+<div *ngIf="user">
+  <p><b>First:</b> {{user.first_name}}</p>
+  <p><b>Last:</b> {{user.last_name}}</p>
+  <p><b>Age:</b> {{user.age}}</p>
+  <p><b>Email:</b> {{user.email}}</p>
+  <p><b>Website:</b> {{user.web}}</p>
+  <p><b>Company:</b> {{user.company_name}}</p>
+  <p><b>City:</b> {{user.city}}</p>
+  <p><b>State:</b> {{user.state}}</p>
+  <p><b>Zip:</b> {{user.zip}}</p>
+
+  <button mat-raised-button color="primary" (click)="back()">Back</button>
+</div>
