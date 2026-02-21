@@ -5,11 +5,7 @@ import {
   NgForm,
   Validators,
   _ErrorStateTracker
-} from "./chunk-HAJ3AXE7.js";
-import {
-  AutofillMonitor,
-  TextFieldModule
-} from "./chunk-Q5B3T53X.js";
+} from "./chunk-7BQTSBQR.js";
 import {
   MAT_FORM_FIELD,
   MatError,
@@ -19,28 +15,36 @@ import {
   MatHint,
   MatLabel,
   MatPrefix,
-  MatSuffix,
+  MatSuffix
+} from "./chunk-427S4MWR.js";
+import {
   getSupportedInputTypes
-} from "./chunk-2BRPUMJB.js";
+} from "./chunk-QA3GTKRG.js";
+import {
+  AutofillMonitor,
+  TextFieldModule
+} from "./chunk-XKQE5ZJL.js";
 import {
   _IdGenerator
-} from "./chunk-SGVO5TKE.js";
+} from "./chunk-P7AWUE7F.js";
+import "./chunk-WGIRM4EZ.js";
+import "./chunk-OSVNOQBB.js";
+import "./chunk-TQCDKYB6.js";
+import "./chunk-BERQSVQU.js";
+import "./chunk-OA52ICVD.js";
 import {
   coerceBooleanProperty
-} from "./chunk-UXRDZ77E.js";
-import "./chunk-NVTXKKCI.js";
-import {
-  Platform
-} from "./chunk-4RANZEEM.js";
-import "./chunk-AMBSKETK.js";
-import "./chunk-E2QBHQ3W.js";
+} from "./chunk-2ZKP62O3.js";
+import "./chunk-N4DOILP3.js";
 import {
   BidiModule
-} from "./chunk-N26YDOZH.js";
-import "./chunk-ZNP2N7EQ.js";
-import "./chunk-AD7QWZXX.js";
-import "./chunk-MO42GU3U.js";
-import "./chunk-BR7DHDGN.js";
+} from "./chunk-6CEZP655.js";
+import "./chunk-KASRXMHI.js";
+import {
+  Platform
+} from "./chunk-5GPAXKH5.js";
+import "./chunk-7XZ4A227.js";
+import "./chunk-WEXSGDHL.js";
 import {
   Directive,
   ElementRef,
@@ -49,7 +53,6 @@ import {
   NgModule,
   NgZone,
   Renderer2,
-  Subject,
   booleanAttribute,
   effect,
   inject,
@@ -64,12 +67,15 @@ import {
   ɵɵdefineNgModule,
   ɵɵdomProperty,
   ɵɵlistener
-} from "./chunk-L4NRQQKW.js";
+} from "./chunk-D7ZVSHZF.js";
+import {
+  Subject
+} from "./chunk-PJVWDKLX.js";
 
-// ../../node_modules/@angular/material/fesm2022/_input-value-accessor-chunk.mjs
+// node_modules/@angular/material/fesm2022/_input-value-accessor-chunk.mjs
 var MAT_INPUT_VALUE_ACCESSOR = new InjectionToken("MAT_INPUT_VALUE_ACCESSOR");
 
-// ../../node_modules/@angular/material/fesm2022/input.mjs
+// node_modules/@angular/material/fesm2022/input.mjs
 function getMatInputUnsupportedTypeError(type) {
   return Error(`Input type "${type}" isn't supported by matInput.`);
 }

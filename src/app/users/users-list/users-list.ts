@@ -1,12 +1,15 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { User } from '../../models/user';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { MatSort, MatSortModule } from '@angular/material/sort';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { UserService } from '../../services/user';
 import { Router } from '@angular/router';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -16,16 +19,16 @@ import { MatIconModule } from '@angular/material/icon';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatFormFieldModule,
     MatInputModule,
-    MatIconModule,
-    MatFormFieldModule
+    MatIconModule
   ],
   templateUrl: './users-list.html',
-  styleUrls: ['./users-list.css'],
+  styleUrls: ['./users-list.css']
 })
 export class UsersListComponent implements OnInit, AfterViewInit {
 
-  displayedColumns = ['first_name','last_name','age','web','email'];
+  displayedColumns = ['first_name', 'last_name', 'age', 'email', 'web'];
   dataSource = new MatTableDataSource<User>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -37,6 +40,7 @@ export class UsersListComponent implements OnInit, AfterViewInit {
     this.service.getUsers().subscribe(res => {
       this.dataSource.data = res;
     });
+
     this.dataSource.filterPredicate = (data, filter) =>
       data.first_name.toLowerCase().includes(filter) ||
       data.last_name.toLowerCase().includes(filter);
